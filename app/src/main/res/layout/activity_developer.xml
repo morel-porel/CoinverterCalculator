@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeveloperActivity"
+    android:orientation="vertical"
+    android:padding="32dp">
+
+
+  <ImageView
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:src="@drawable/currency_exchange_24px"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="50dp"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Coinverter"
+      android:textStyle="bold"
+      android:textSize="60dp"
+      android:layout_gravity="center_horizontal"/>
+
+  <Button
+      android:id="@+id/dev_settings"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:background="@drawable/arrow_back_24px"
+      android:layout_marginTop="50dp"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_gravity="center_vertical"
+      android:layout_marginTop="20dp"
+      >
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:src="@drawable/group_24px"
+        android:layout_marginLeft="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="About US"
+        android:layout_toRightOf="@id/image_view"
+        android:layout_centerVertical="true"
+        style="@style/BUTTON"/>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/pacio"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/pacio"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/pacio"
+        android:text="Lead Developer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/pacio"
+        android:layout_centerVertical="true"
+        android:textSize="12dp"
+        style="@style/BUTTON"
+        android:text="Muriel D. Pacio \n &quot; Bread makes you fat? &quot;"  />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="70dp"
+      android:layout_marginTop="10dp">
+
+    <ImageView
+        android:id="@+id/panonce"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/panonce"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@id/panonce"
+        android:text="Developer" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/panonce"
+        android:layout_centerVertical="true"
+        style="@style/BUTTON"
+        android:text="Herlanz L. Panonce \n &quot; I am a joke &quot;"  />
+
+  </RelativeLayout>
+
+
+</LinearLayout>
