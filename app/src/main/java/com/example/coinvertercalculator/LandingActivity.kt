@@ -39,6 +39,11 @@ class LandingActivity : AppCompatActivity() {
             val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
         }
+        val button_rates = findViewById<Button>(R.id.button_rates)
+        button_rates.setOnClickListener {
+            val intent = Intent(this, RatesActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }

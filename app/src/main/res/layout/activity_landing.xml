@@ -35,7 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginVertical="40dp"
         android:padding="15dp">
         <ImageView
             android:layout_width="150dp"
@@ -64,8 +63,7 @@
             android:id="@+id/button_convert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="30dp"
-            android:layout_margin="19dp"
+            android:layout_marginHorizontal="19dp"
             style="@style/BUTTON"
             android:text="Convert Currency"/>
 
@@ -73,9 +71,18 @@
             android:id="@+id/button_history"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="30dp"
-            android:layout_margin="19dp"
+            android:layout_marginHorizontal="19dp"
+            android:layout_marginTop="10dp"
             style="@style/BUTTON"
             android:text="History"/>
+
+        <Button
+            android:id="@+id/button_rates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="19dp"
+            android:layout_marginTop="10dp"
+            style="@style/BUTTON"
+            android:text="Currencies"/>
     </LinearLayout>
 </LinearLayout>
