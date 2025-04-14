@@ -49,6 +49,7 @@ class SignupActivity : AppCompatActivity() {
                 putExtra("email", password)
             }
             startActivity(intent)
+            finish()
         }
     }
 }

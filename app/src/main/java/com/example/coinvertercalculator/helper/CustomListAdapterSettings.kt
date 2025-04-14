@@ -21,10 +21,10 @@ class CustomListAdapterSettings (
 
         val setting =listofSettings[position]
 
-        val imageViewPhoto = view.findViewById<ImageView>(R.id.imageview_img)
+//        val imageViewPhoto = view.findViewById<ImageView>(R.id.imageview_img)
         val textViewLabel = view.findViewById<TextView>(R.id.textview_label)
 
-        imageViewPhoto.setImageResource(setting.img)
+//        imageViewPhoto.setImageResource(setting.img)
         textViewLabel.setText(setting.label)
 
         view.setOnClickListener{

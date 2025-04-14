@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:padding="32dp"
     tools:context=".ProfileActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
 
     <ImageView
         android:layout_width="100dp"
@@ -25,11 +27,13 @@
         android:layout_gravity="center_horizontal"/>
 
     <Button
-        android:id="@+id/pf_settings"
+        android:id="@+id/button_back"
         android:layout_marginTop="30dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/arrow_back_24px"/>
+        android:background="@drawable/arrow_back_24px"
+        android:layout_gravity="start"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,11 +49,16 @@
         <EditText
             android:id="@+id/Username"
             android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:hint="Edit Username"
-            android:gravity="center" />
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/Password"
+            android:inputType="text"/>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,11 +74,16 @@
         <EditText
             android:id="@+id/Password"
             android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:hint="Edit Password"
-            android:gravity="center" />
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/Email"
+            android:inputType="textPassword"/>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,11 +99,16 @@
         <EditText
             android:id="@+id/Email"
             android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:hint="example@email.com"
-            android:gravity="center" />
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:nextFocusDown="@id/save"
+            android:inputType="textEmailAddress"/>
     </LinearLayout>
+
 
     <Button
         android:id="@+id/save"
@@ -98,6 +117,7 @@
         android:layout_height="wrap_content"
         android:text="Save"
         style="@style/BUTTON"/>
+
 
     <Button
         android:id="@+id/logout"

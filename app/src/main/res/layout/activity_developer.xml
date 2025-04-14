@@ -26,7 +26,7 @@
       android:layout_gravity="center_horizontal"/>
 
   <Button
-      android:id="@+id/dev_settings"
+      android:id="@+id/button_back"
       android:layout_width="50dp"
       android:layout_height="50dp"
       android:background="@drawable/arrow_back_24px"

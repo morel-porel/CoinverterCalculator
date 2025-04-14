@@ -11,8 +11,15 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:padding="12dp">
+
+        <!--        android:background="@color/white"-->
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/arrow_back_24px" />
+
 
         <TextView
             android:id="@+id/order"

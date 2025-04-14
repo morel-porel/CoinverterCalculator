@@ -23,9 +23,8 @@ class HistoryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_history)
 
         val button_back = findViewById<Button>(R.id.button_back)
-        button_back.setOnClickListener(){
-            val intent = Intent(this, LandingActivity::class.java)
-            startActivity(intent)
+        button_back.setOnClickListener {
+            finish()
         }
 
         listView = findViewById(R.id.conversionListView)

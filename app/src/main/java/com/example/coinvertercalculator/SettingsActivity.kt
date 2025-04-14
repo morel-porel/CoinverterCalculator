@@ -25,11 +25,10 @@ class SettingsActivity : AppCompatActivity() {
 
         val button_back = findViewById<Button>(R.id.button_back)
         button_back.setOnClickListener(){
-            val intent = Intent(this, LandingActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
-        val listView =findViewById<ListView>(R.id.listView)
+//        val listView =findViewById<ListView>(R.id.listView)
 
         val settings = listOf(
             Settings("Profile", R.drawable.person_24px),
@@ -56,10 +55,10 @@ class SettingsActivity : AppCompatActivity() {
                 }
             }
         )
-        listView.adapter = adapter
+//        listView.adapter = adapter
 
 
-/*        val user_profile = findViewById<Button>(R.id.user_profile)
+        val user_profile = findViewById<Button>(R.id.user_profile)
         user_profile.setOnClickListener(){
             Log.e("User Profile",  "User Profile, clicked!")
 
@@ -77,7 +76,7 @@ class SettingsActivity : AppCompatActivity() {
 
             val intent = Intent(this, DeveloperActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
         val toggleDarkMode = findViewById<SwitchCompat>(R.id.toggleDarkMode)
         val sharedPreferences = getSharedPreferences("Mode", Context.MODE_PRIVATE)

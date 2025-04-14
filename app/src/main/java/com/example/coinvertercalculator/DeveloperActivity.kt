@@ -15,14 +15,9 @@ class DeveloperActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_developer)
 
-        val dev_settings = findViewById<Button>(R.id.dev_settings)
-        dev_settings.setOnClickListener{
-            val intent = Intent(this, SettingsActivity::class.java )
-            Log.e("Settings", "Settings, returned!")
-
-            Toast.makeText(this, "Settings, returned!!!", Toast.LENGTH_LONG).show()
-            startActivity(intent)
-
+        val button_back = findViewById<Button>(R.id.button_back)
+        button_back.setOnClickListener {
+            finish()
         }
 
     }

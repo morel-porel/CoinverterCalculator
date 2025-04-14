@@ -8,7 +8,9 @@
     android:padding="50dp"
     android:layout_marginTop="100dp"
     tools:context=".LoginActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
 
     <ImageView
         android:layout_width="match_parent"
@@ -16,6 +18,7 @@
         android:layout_gravity="center_horizontal"
         android:scaleType="fitCenter"
         android:src="@drawable/currency_exchange_24px"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,11 +37,14 @@
             android:id="@+id/edittext_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"/>
-
-
+            android:hint="Username"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:nextFocusDown="@id/edittext_password"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,10 +57,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            android:inputType="textPassword"/>
-
+            android:inputType="textPassword"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:nextFocusDown="@id/button_login"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
     </LinearLayout>
-
 
     <Button
         android:id="@+id/button_login"
@@ -72,8 +81,5 @@
         style="@style/BUTTON"
         android:text="Sign up"
         android:textSize="18sp"
-        android:layout_marginVertical="50dp"/>
-
-
-
+        android:layout_marginVertical="10dp"/>
 </LinearLayout>

@@ -63,12 +63,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    //recyler view
-    implementation("androidx.recyclerview:recyclerview:1.4.0")
-
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    //recyler view
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
 }

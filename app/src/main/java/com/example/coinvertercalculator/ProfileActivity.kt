@@ -26,13 +26,9 @@ class ProfileActivity : AppCompatActivity() {
         Password.setText((application as User).password)
         Email.setText((application as User).email)
 
-        val pf_settings = findViewById<Button>(R.id.pf_settings)
-        pf_settings.setOnClickListener{
-            val intent = Intent(this, SettingsActivity::class.java )
-            Log.e("Settings", "Settings, returned!")
-
-            Toast.makeText(this, "Settings, returned!!!", Toast.LENGTH_LONG).show()
-            startActivity(intent)
+        val button_back = findViewById<Button>(R.id.button_back)
+        button_back.setOnClickListener {
+            finish()
         }
 
         val save = findViewById<Button>(R.id.save)
