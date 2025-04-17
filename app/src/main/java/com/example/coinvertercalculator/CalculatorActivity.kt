@@ -7,7 +7,9 @@ import android.view.View
 import android.widget.*
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.coinvertercalculator.app.User
 import com.example.coinvertercalculator.data.ConversionResult
+import com.example.coinvertercalculator.helper.UserPreferenceManager
 
 class CalculatorActivity : AppCompatActivity() {
     private var selectedCurrencyTop = "USD"
@@ -95,6 +97,11 @@ class CalculatorActivity : AppCompatActivity() {
                     displayBottom.text.toString().toDouble()
                 )
             )
+
+            //save to device
+            var userPrefsManager = UserPreferenceManager(this)
+            var username = (application as User).username
+            userPrefsManager.saveHistoryToDevice(this, username, HistoryActivity.conversionHistory)
 
             Toast.makeText(this, "Conversion saved", Toast.LENGTH_LONG).show()
         }

@@ -3,12 +3,37 @@ package com.example.coinvertercalculator.helper
 import android.content.Context
 import android.net.Uri
 import android.widget.Toast
+import com.example.coinvertercalculator.data.ConversionResult
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.util.LinkedList
+import java.util.Queue
 
 class UserPreferenceManager(private val context: Context) {
 
     fun userExists(username: String): Boolean {
         val sp = context.getSharedPreferences(username, Context.MODE_PRIVATE)
         return sp.contains("username")
+    }
+
+    fun saveHistoryToDevice(context: Context, username: String, history: Queue<ConversionResult>) {
+        val sharedPreferences = context.getSharedPreferences(username, Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        val gson = Gson()
+        val jsonString = gson.toJson(history)
+        editor.putString("history", jsonString)
+        editor.commit()
+    }
+
+    fun getHistoryFromDevice(context: Context, username: String): Queue<ConversionResult> {
+        val sharedPreferences = context.getSharedPreferences(username, Context.MODE_PRIVATE)
+        val jsonString = sharedPreferences.getString("history", null)
+        if (jsonString != null) {
+            val gson = Gson()
+            val type = object : TypeToken<Queue<ConversionResult>>() {}.type
+            return gson.fromJson(jsonString, type)
+        }
+        return LinkedList() // Return an empty list if no history is found
     }
 
     fun getUserDetails(username: String): Map<String, String?>? {

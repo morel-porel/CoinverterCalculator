@@ -69,4 +69,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     //recyler view
     implementation("androidx.recyclerview:recyclerview:1.4.0")
+    //gson, for serializing object to device
+    implementation ("com.google.code.gson:gson:2.10.1")
 }

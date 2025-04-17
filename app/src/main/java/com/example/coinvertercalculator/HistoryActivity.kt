@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.coinvertercalculator.app.User
 import com.example.coinvertercalculator.data.ConversionResult
 import com.example.coinvertercalculator.helper.ConversionResultAdapter
+import com.example.coinvertercalculator.helper.UserPreferenceManager
 import java.util.LinkedList
 import java.util.Queue
 
@@ -13,7 +15,7 @@ class HistoryActivity : AppCompatActivity() {
 
     //static
     companion object{
-        val conversionHistory: Queue<ConversionResult> = LinkedList()
+        var conversionHistory: Queue<ConversionResult> = LinkedList()
     }
 
     private lateinit var listView: ListView
@@ -42,7 +44,9 @@ class HistoryActivity : AppCompatActivity() {
     }
 
     private fun loadConversionHistory() {
-
+        var userPrefsManager = UserPreferenceManager(this)
+        var username = (application as User).username
+        conversionHistory = userPrefsManager.getHistoryFromDevice(this, username)
     }
 
     private fun updateListView() {
