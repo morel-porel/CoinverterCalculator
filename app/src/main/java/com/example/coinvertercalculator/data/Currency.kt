@@ -2,7 +2,7 @@ package com.example.coinvertercalculator.data
 
 import com.example.coinvertercalculator.R
 
-data class Currency (
+class Currency (
     var currencyAcronym: String = "",
     var currencyName: String = "",
     var currencyRate: String = "",

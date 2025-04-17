@@ -1,6 +1,7 @@
 package com.example.coinvertercalculator
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.coinvertercalculator.app.User
+import com.example.coinvertercalculator.helper.UserPreferenceManager
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,17 +41,30 @@ class SignupActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            (application as User).username = username
-            (application as User).email = email
-            (application as User).password = password
+            //save to device
+            val userPrefsManager = UserPreferenceManager(this)
 
-            val intent = Intent(this, LoginActivity::class.java).apply{
-                putExtra("username", username)
-                putExtra("password", password)
-                putExtra("email", password)
+            if(!userPrefsManager.userExists(username)){
+
+                (application as User).username = username
+                (application as User).email = email
+                (application as User).password = password
+
+                userPrefsManager.addUser(username, email, password)
+
+                val intent = Intent(this, LoginActivity::class.java).apply{
+                    putExtra("username", username)
+                    putExtra("password", password)
+                    putExtra("email", email)
+                }
+                startActivity(intent)
+                finish()
             }
-            startActivity(intent)
-            finish()
+            else{
+                Toast.makeText(this, "Username is taken", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
         }
     }
 }

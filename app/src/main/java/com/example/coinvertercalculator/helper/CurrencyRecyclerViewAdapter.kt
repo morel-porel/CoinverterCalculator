@@ -12,7 +12,7 @@
     class CurrencyRecyclerViewAdapter (private val listOfCurrencies: List<Currency>)
         : RecyclerView.Adapter<CurrencyRecyclerViewAdapter.ItemViewHolder>() {
         class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val photo =view.findViewById<ImageView>(R.id.currency_photo)
+            val photo = view.findViewById<ImageView>(R.id.currency_photo)
             val currencyAcronym = view.findViewById<TextView>(R.id.currency_acronym)
             val currencyName = view.findViewById<TextView>(R.id.currency_name)
             val currencyRate = view.findViewById<TextView>(R.id.currency_rate)

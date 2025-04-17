@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.coinvertercalculator.app.User
+import com.example.coinvertercalculator.helper.UserPreferenceManager
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
         var edittext_username = findViewById<EditText>(R.id.edittext_username)
         var edittext_password = findViewById<EditText>(R.id.edittext_password)
 
+        //from signup
         intent?.let {
             it.getStringExtra("username")?.let { username->
                 edittext_username.setText(username)
@@ -29,8 +31,10 @@ class LoginActivity : AppCompatActivity() {
                 edittext_password.setText(password)
             }
         }
+
         val button_login = findViewById<Button>(R.id.button_login)
         button_login.setOnClickListener {
+            val userPrefsManager = UserPreferenceManager(this)
             val username = edittext_username.text.toString()
             val password = edittext_password.text.toString()
 
@@ -38,10 +42,18 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Username and Password cannot be empty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
-            if((application as User).username.isNullOrEmpty()||(application as User).password.isNullOrEmpty()){
+            if(!userPrefsManager.userExists(username)){
                 Toast.makeText(this, "No registered user, please sign up", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
+
+            //get details via shared prefs
+            val userDetails = userPrefsManager.getUserDetails(username)
+
+            (application as User).username = userDetails?.get("username") ?: ""
+            (application as User).email = userDetails?.get("email") ?: ""
+            (application as User).password = userDetails?.get("password") ?: ""
+
             val intent = Intent(this, LandingActivity::class.java)
             startActivity(intent)
         }

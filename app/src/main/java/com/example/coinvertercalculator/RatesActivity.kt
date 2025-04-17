@@ -2,10 +2,7 @@ package com.example.coinvertercalculator
 
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.coinvertercalculator.data.Currency
@@ -15,6 +12,7 @@ class RatesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rates)
+
         val currencyList = listOf(
             Currency("AED", "UAE Dirham", "15.63", R.drawable.aed),
             Currency("AUD", "Australian Dollar", "37.15", R.drawable.aud),
@@ -59,5 +57,9 @@ class RatesActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onResume() {
+        super.onResume()
     }
 }

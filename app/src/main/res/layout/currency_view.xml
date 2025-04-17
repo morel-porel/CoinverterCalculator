@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="4dp"
-                android:textColor="@color/material_dynamic_neutral_variant20"
+                android:textColor="#5C5F61"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:layout_gravity="center_vertical"/>
