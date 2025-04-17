@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.coinvertercalculator.app.User
 import com.example.coinvertercalculator.helper.UserPreferenceManager
 import com.example.coinvertercalculator.helper.min
+import com.example.coinvertercalculator.helper.showBasicDialogue
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
@@ -80,10 +81,21 @@ class ProfileActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Profile Saved", Toast.LENGTH_LONG).show()
         }
+
         val logout = findViewById<Button>(R.id.logout)
         logout.setOnClickListener {
-            val intent = Intent(this, LogoutActivity::class.java )
-            startActivity(intent)
+            //popup
+            showBasicDialogue(
+                this,
+                "Logout?",
+                "You will be redirected to login page",
+                "Confirm",
+                onConfirm = {
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            )
         }
     }
 

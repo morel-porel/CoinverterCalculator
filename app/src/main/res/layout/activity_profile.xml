@@ -25,7 +25,7 @@
         android:textStyle="bold"
         android:textSize="30dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginVertical="15dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -42,97 +42,84 @@
             android:layout_gravity="center_horizontal"/>
 
     </androidx.cardview.widget.CardView>
-    
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Username:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/Username"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit Username"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@id/Password"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Password:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit Password"
+        android:imeOptions="actionNext"
+        android:nextFocusDown="@id/Email"
+        android:inputType="textPassword"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Email:"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="example@email.com"
+        android:imeOptions="actionDone"
+        android:nextFocusDown="@id/save"
+        android:inputType="textEmailAddress"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="12dp">
+
+        <Button
+            android:id="@+id/save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="20dp"
-            android:text="Username:"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/Username"
-            android:layout_marginTop="10dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Edit Username"
-            android:gravity="center"
-            android:imeOptions="actionNext"
-            android:nextFocusDown="@id/Password"
-            android:inputType="text"/>
-    </LinearLayout>
+            android:text="Save"
+            android:layout_marginHorizontal="15dp"
+            style="@style/BUTTON"/>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
+        <Button
+            android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="20dp"
-            android:text="Password:"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/Password"
-            android:layout_marginTop="10dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Edit Password"
-            android:gravity="center"
-            android:imeOptions="actionNext"
-            android:nextFocusDown="@id/Email"
-            android:inputType="textPassword"/>
+            android:text="Logout"
+            android:layout_marginHorizontal="15dp"
+            style="@style/BUTTON"/>
+
     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textSize="20dp"
-            android:text="Email:"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/Email"
-            android:layout_marginTop="10dp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="example@email.com"
-            android:gravity="center"
-            android:imeOptions="actionDone"
-            android:nextFocusDown="@id/save"
-            android:inputType="textEmailAddress"/>
-    </LinearLayout>
-
-
-    <Button
-        android:id="@+id/save"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        style="@style/BUTTON"/>
-
-
-    <Button
-        android:id="@+id/logout"
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        style="@style/BUTTON"/>
 
 </LinearLayout>
