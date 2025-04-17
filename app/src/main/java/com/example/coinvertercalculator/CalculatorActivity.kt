@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.*
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.coinvertercalculator.data.ConversionResult
 
 class CalculatorActivity : AppCompatActivity() {
     private var selectedCurrencyTop = "USD"
@@ -76,6 +77,28 @@ class CalculatorActivity : AppCompatActivity() {
         button_back.setOnClickListener {
             finish()
         }
+
+        val HistoryButton = findViewById<Button>(R.id.button_history)
+        HistoryButton.setOnClickListener {
+
+            //Ensure max 20
+            if(HistoryActivity.conversionHistory.size >= 20){
+                HistoryActivity.conversionHistory.poll()
+            }
+
+            //add to history list
+            HistoryActivity.conversionHistory.add(
+                ConversionResult(
+                    selectedCurrencyTop,
+                    selectedCurrencyBottom,
+                    displayTop.text.toString().toDouble(),
+                    displayBottom.text.toString().toDouble()
+                )
+            )
+
+            Toast.makeText(this, "Conversion saved", Toast.LENGTH_LONG).show()
+        }
+
     }
 
     private fun disableKeyboard(editText: EditText) {
