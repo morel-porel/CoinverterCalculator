@@ -1,10 +1,7 @@
 package com.example.coinvertercalculator
 
-import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -50,7 +47,7 @@ class SignupActivity : AppCompatActivity() {
                 (application as User).email = email
                 (application as User).password = password
 
-                userPrefsManager.addUser(username, email, password)
+                userPrefsManager.addOrEditUser(username, email, password, true)
 
                 val intent = Intent(this, LoginActivity::class.java).apply{
                     putExtra("username", username)

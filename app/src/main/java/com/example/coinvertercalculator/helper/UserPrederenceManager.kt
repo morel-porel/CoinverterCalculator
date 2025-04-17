@@ -1,6 +1,7 @@
 package com.example.coinvertercalculator.helper
 
 import android.content.Context
+import android.net.Uri
 import android.widget.Toast
 
 class UserPreferenceManager(private val context: Context) {
@@ -23,7 +24,7 @@ class UserPreferenceManager(private val context: Context) {
         }
     }
 
-    fun addUser(username: String, email: String, password: String) {
+    fun addOrEditUser(username: String, email: String, password: String, type: Boolean) {
 
         val sp = context.getSharedPreferences(username, Context.MODE_PRIVATE)
         val editor = sp.edit()
@@ -32,7 +33,7 @@ class UserPreferenceManager(private val context: Context) {
         editor.putString("password", password)
         editor.commit()
 
-        Toast.makeText(context, "$username added successfully", Toast.LENGTH_LONG).show()
+        if(type) Toast.makeText(context, "$username added successfully", Toast.LENGTH_LONG).show()
 
     }
 
