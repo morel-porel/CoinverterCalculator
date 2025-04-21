@@ -50,12 +50,23 @@ class LoginActivity : AppCompatActivity() {
             //get details via shared prefs
             val userDetails = userPrefsManager.getUserDetails(username)
 
-            (application as User).username = userDetails?.get("username") ?: ""
-            (application as User).email = userDetails?.get("email") ?: ""
-            (application as User).password = userDetails?.get("password") ?: ""
+            if(userDetails != null) {
+                val storedPassword = userDetails["password"] ?: ""
 
-            val intent = Intent(this, LandingActivity::class.java)
-            startActivity(intent)
+                if(storedPassword == password) {
+
+                    (application as User).username = userDetails?.get("username") ?: ""
+                    (application as User).email = userDetails?.get("email") ?: ""
+                    (application as User).password = userDetails?.get("password") ?: ""
+
+                    val intent = Intent(this, LandingActivity::class.java)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Incorrect password, please try again", Toast.LENGTH_LONG).show()
+                    return@setOnClickListener
+                }
+            }
+
         }
 
         val button_signup = findViewById<Button>(R.id.button_signup)

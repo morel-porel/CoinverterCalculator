@@ -65,21 +65,13 @@
         android:layout_marginTop="100dp">
 
         <Button
-            android:id="@+id/button_history"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:text="history"
-            android:textSize="9dp"/>
-
-        <Button
             android:id="@+id/button_clear"
-            android:layout_width="85dp"
+            android:layout_width="170dp"
             android:layout_height="85dp"
-            android:text="Clear"
-            android:layout_toRightOf="@+id/button_history"/>
+            android:text="Clear"/>
 
         <Button
-            android:id="@+id/button_equal"
+            android:id="@+id/button_history"
             android:layout_width="170dp"
             android:layout_height="85dp"
             android:layout_toRightOf="@id/button_clear"
@@ -90,7 +82,7 @@
             android:id="@+id/button7"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_below="@id/button_history"
+            android:layout_below="@id/button_clear"
             android:layout_marginTop="0dp"
             android:text="7"
             android:textSize="20dp" />
@@ -118,7 +110,7 @@
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:layout_toRightOf="@+id/button9"
-            android:layout_below="@id/button_equal"
+            android:layout_below="@id/button_history"
             android:text="del"/>
 
         <Button
