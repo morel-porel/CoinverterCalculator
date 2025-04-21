@@ -72,23 +72,15 @@
             android:textSize="9dp"/>
 
         <Button
-            android:id="@+id/button_curChange"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
-            android:text="change"
-            android:textSize="9dp"
-            android:layout_toRightOf="@id/button_history"/>
-
-        <Button
             android:id="@+id/button_clear"
             android:layout_width="85dp"
             android:layout_height="85dp"
             android:text="Clear"
-            android:layout_toRightOf="@+id/button_curChange"/>
+            android:layout_toRightOf="@+id/button_history"/>
 
         <Button
             android:id="@+id/button_equal"
-            android:layout_width="85dp"
+            android:layout_width="170dp"
             android:layout_height="85dp"
             android:layout_toRightOf="@id/button_clear"
             android:text="="
@@ -107,7 +99,7 @@
             android:id="@+id/button8"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:layout_below="@+id/button_curChange"
+            android:layout_below="@+id/button_clear"
             android:layout_toRightOf="@id/button7"
             android:text="8"
             android:textSize="20dp"/>
