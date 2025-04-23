@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="32dp"
-    tools:context=".SettingsActivity">
+    tools:context=".SettingsActivity"
+    android:background="@drawable/bgflip">
 
     <Button
         android:id="@+id/button_back"
@@ -26,7 +27,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:src="@drawable/currency_exchange_24px" />
+            android:src="@drawable/coinverter" />
 
         <TextView
             android:layout_marginHorizontal="7dp"
@@ -35,7 +36,7 @@
             android:layout_gravity="center"
             android:text="Coinverter"
             android:textSize="30dp"
-            android:textStyle="bold" />
+            style="@style/TITLE"/>
 
     </LinearLayout>
 
@@ -43,10 +44,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
-        android:textStyle="bold"
         android:textSize="30dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="15dp"/>
+        android:layout_marginVertical="15dp"
+        style="@style/TITLE"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -64,10 +65,10 @@
             android:layout_marginHorizontal="12dp"
             android:id="@+id/user_profile"
             android:layout_width="200dp"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:text="Profile"
             android:layout_gravity="center"
-            style="@style/BUTTON" />
+            style="@style/FILLED" />
 
     </LinearLayout>
 
@@ -86,9 +87,9 @@
             android:layout_marginHorizontal="12dp"
             android:id="@+id/about_us"
             android:layout_width="200dp"
-            android:layout_height="35dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            style="@style/BUTTON"
+            style="@style/FILLED"
             android:text="About US" />
 
     </LinearLayout>
@@ -109,7 +110,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Dark Mode:"
-            android:textStyle="bold"
+            style="@style/TITLE"
             android:textSize="25dp"
             android:layout_gravity="center"/>
 

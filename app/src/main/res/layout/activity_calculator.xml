@@ -60,128 +60,189 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="400dp"
         android:layout_gravity="center_vertical"
         android:layout_marginTop="100dp">
 
         <Button
             android:id="@+id/button_clear"
             android:layout_width="170dp"
-            android:layout_height="85dp"
-            android:text="Clear"/>
+            android:layout_height="80dp"
+            android:text="Clear"
+            style="@style/CALC_COLORED"
+            android:textSize="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            />
 
         <Button
             android:id="@+id/button_history"
             android:layout_width="170dp"
-            android:layout_height="85dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@id/button_clear"
             android:text="="
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            style="@style/CALC_COLORED"
+            android:layout_marginBottom="4dp"/>
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@id/button_clear"
-            android:layout_marginTop="0dp"
+            style="@style/CALC_PLAIN"
+            android:layout_marginTop="4dp"
             android:text="7"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"/>
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@+id/button_clear"
+            style="@style/CALC_PLAIN"
             android:layout_toRightOf="@id/button7"
             android:text="8"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button9"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@+id/button_clear"
+            style="@style/CALC_PLAIN"
             android:layout_toRightOf="@id/button8"
             android:text="9"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button_del"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@+id/button9"
             android:layout_below="@id/button_history"
-            android:text="del"/>
+            android:text="del"
+            style="@style/CALC_COLORED"
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button_dec"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@+id/button6"
             android:layout_below="@+id/button_del"
             android:text="•"
-            android:textSize="30dp"/>
+            android:textSize="30dp"
+            style="@style/CALC_COLORED"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button0"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@+id/button3"
             android:layout_below="@id/button_dec"
             android:text="0"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            style="@style/CALC_COLORED"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button4"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@id/button7"
+            style="@style/CALC_PLAIN"
             android:text="4"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"/>
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@id/button8"
+            style="@style/CALC_PLAIN"
             android:layout_toRightOf="@id/button4"
             android:text="5"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@+id/button9"
+            style="@style/CALC_PLAIN"
             android:layout_toRightOf="@id/button5"
             android:text="6"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_below="@id/button4"
+            style="@style/CALC_PLAIN"
             android:text="1"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"/>
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@id/button1"
+            style="@style/CALC_PLAIN"
             android:layout_below="@id/button5"
             android:text="2"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"/>
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="85dp"
-            android:layout_height="85dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@id/button2"
+            style="@style/CALC_PLAIN"
             android:layout_below="@+id/button6"
             android:text="3"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
 
     </RelativeLayout>
 

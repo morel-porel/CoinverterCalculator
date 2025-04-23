@@ -6,18 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="50dp"
-    android:layout_marginTop="100dp"
+    android:layout_marginTop="0dp"
     tools:context=".LoginActivity"
     android:orientation="vertical"
     android:focusableInTouchMode="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:background="@drawable/pinkbg">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250dp"
         android:scaleType="fitCenter"
-        android:src="@drawable/currency_exchange_24px"/>
+        android:src="@drawable/coinverter"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +27,7 @@
         android:text="Coinverter"
         android:textSize="27sp"
         android:layout_gravity="center_horizontal"
-        android:textStyle="bold"/>
+        style="@style/TITLE"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -68,17 +70,17 @@
     <Button
         android:id="@+id/button_login"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="Login"
         android:textSize="18sp"
-        style="@style/BUTTON"
+        style="@style/FILLED"
         android:layout_marginVertical="10dp"/>
 
     <Button
         android:id="@+id/button_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/BUTTON"
+        style="@style/UNFILLED"
         android:text="Sign up"
         android:textSize="18sp"
         android:layout_marginVertical="10dp"/>

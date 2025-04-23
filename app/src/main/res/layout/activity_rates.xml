@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RatesActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg2">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:id="@+id/button_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/arrow_back_24px" />
+            android:background="@drawable/arrow_back_plain"/>
 
 
         <TextView
@@ -28,7 +29,7 @@
             android:text="Conversion Rates"
             android:layout_centerInParent="true"
             android:textSize="30dp"
-            android:textStyle="bold">
+            style="@style/TITLEPLAIN">
 
         </TextView>
 

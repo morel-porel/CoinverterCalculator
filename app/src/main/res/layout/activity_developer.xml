@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".DeveloperActivity"
     android:orientation="vertical"
-    android:padding="32dp">
+    android:padding="32dp"
+    android:background="@drawable/bgflip">
 
   <Button
       android:id="@+id/button_back"
@@ -26,7 +27,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
-        android:src="@drawable/currency_exchange_24px" />
+        android:src="@drawable/coinverter" />
 
     <TextView
         android:layout_marginHorizontal="7dp"
@@ -35,7 +36,7 @@
         android:layout_gravity="center"
         android:text="Coinverter"
         android:textSize="30dp"
-        android:textStyle="bold" />
+        style="@style/TITLE"/>
 
   </LinearLayout>
 
@@ -43,7 +44,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:text="About Us"
-      android:textStyle="bold"
+      style="@style/TITLE"
       android:textSize="30dp"
       android:layout_gravity="center_horizontal"
       android:layout_marginVertical="15dp"/>
@@ -73,14 +74,15 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="25dp"
-          android:text="Lead Developer" />
+          android:text="Lead Developer"
+          style="@style/TITLE"/>
 
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="18dp"
           android:padding="12dp"
-          style="@style/BUTTON"
+          style="@style/FILLED"
           android:text="Muriel D. Pacio \n &quot; Bread makes you fat? &quot;"  />
 
     </LinearLayout>
@@ -111,13 +113,14 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="25dp"
-          android:text="Developer" />
+          android:text="Developer"
+          style="@style/TITLE"/>
 
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textSize="20dp"
-          style="@style/BUTTON"
+          style="@style/FILLED"
           android:padding="16dp"
           android:text="Herlanz L. Panonce \n &quot; I am a joke &quot;"  />
 

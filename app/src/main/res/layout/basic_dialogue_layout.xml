@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
+        style="@style/TITLE"
         android:textStyle="bold"/>
 
     <TextView
@@ -36,8 +37,7 @@
             android:id="@+id/button_confirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#4a4a4a"
-            android:textColor="#ffffff"
+            style="@style/CALC_COLORED"
             android:textSize="18sp"
             android:padding="13dp"
             android:layout_marginEnd="50dp"
@@ -47,8 +47,7 @@
             android:id="@+id/button_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#b1b1b1"
-            android:textColor="#ffffff"
+            style="@style/CALC_PLAIN"
             android:text="Cancel"
             android:textSize="18sp"
             android:padding="13dp"/>

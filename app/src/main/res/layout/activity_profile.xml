@@ -9,7 +9,8 @@
     tools:context=".ProfileActivity"
     android:orientation="vertical"
     android:focusableInTouchMode="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:background="@drawable/bgflip">
 
     <Button
         android:id="@+id/button_back"
@@ -25,7 +26,8 @@
         android:textStyle="bold"
         android:textSize="30dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="15dp"/>
+        android:layout_marginVertical="15dp"
+        style="@style/TITLE"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -49,7 +51,7 @@
         android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:text="Username:"
-        android:textStyle="bold"/>
+        style="@style/TITLE"/>
 
     <EditText
         android:id="@+id/Username"
@@ -67,7 +69,7 @@
         android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:text="Password:"
-        android:textStyle="bold"/>
+        style="@style/TITLE"/>
 
     <EditText
         android:id="@+id/Password"
@@ -85,7 +87,7 @@
         android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:text="Email:"
-        android:textStyle="bold"/>
+        style="@style/TITLE"/>
 
     <EditText
         android:id="@+id/Email"
@@ -110,7 +112,7 @@
             android:layout_height="wrap_content"
             android:text="Save"
             android:layout_marginHorizontal="15dp"
-            style="@style/BUTTON"/>
+            style="@style/CALC_COLORED"/>
 
         <Button
             android:id="@+id/logout"
@@ -118,7 +120,7 @@
             android:layout_height="wrap_content"
             android:text="Logout"
             android:layout_marginHorizontal="15dp"
-            style="@style/BUTTON"/>
+            style="@style/CALC_PLAIN"/>
 
     </LinearLayout>
 
