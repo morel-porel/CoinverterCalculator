@@ -73,7 +73,6 @@ class LoginActivity : AppCompatActivity() {
         button_signup.setOnClickListener {
             Log.e("Android", "Button Clicked")
 
-            Toast.makeText(this, "Button is clicked!", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)

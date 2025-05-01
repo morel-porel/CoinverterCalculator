@@ -38,11 +38,6 @@ class SettingsActivity : AppCompatActivity() {
         val adapter = CustomListAdapterSettings(
             this, settings,
             onClick = {setting, position ->
-                Toast.makeText(
-                    this,
-                    "asd",
-                    Toast.LENGTH_LONG
-                ).show()
                 when(position) {
                     0 -> {
                         val intent = Intent(this, ProfileActivity::class.java)
@@ -62,7 +57,6 @@ class SettingsActivity : AppCompatActivity() {
         user_profile.setOnClickListener(){
             Log.e("User Profile",  "User Profile, clicked!")
 
-            Toast.makeText(this, "User Profile, clicked!!!", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
@@ -72,7 +66,6 @@ class SettingsActivity : AppCompatActivity() {
         about_us.setOnClickListener{
             Log.e("About Us", "About us, clicked!")
 
-            Toast.makeText(this, "About Us, clicked!!!", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, DeveloperActivity::class.java)
             startActivity(intent)
